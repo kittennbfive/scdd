@@ -25,6 +25,6 @@ Filename for output, if not provided a sane default will be used. Specify `PIPE`
 Spit out raw float (using `fwrite()`) instead of formatted values (ASCII).
 
 ## Limitations?
-It's slow... The Linux USBTMC driver has a hardcoded buffer size of 4096 bytes which can't be changed (except by recompiling the driver of course). I considered bypassing the USBTMC driver by using libusb, but i vaguely recall (from previous experiments for s**c**dd) that this does not work better/reliably. I even had the scope totally freeze once (power-cycling required)...  
+It's slow... The Linux USBTMC driver has a hardcoded buffer size of 4096 bytes which can't be changed (except by recompiling the driver of course). I considered bypassing the USBTMC driver by using libusb, but i vaguely recall (from previous experiments for sc**s**d) that this does not work better/reliably. I even had the scope totally freeze once (power-cycling required)...  
   
 Using `$ time ./scdd --filename PIPE --raw-float  > /dev/null` and on my system i get about 48s for 10Mpts; 2m02 for 25Mpts and 4m04 for 50Mpts. YMMV.
